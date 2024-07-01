@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Free Ad</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Load a font called Roboto from Google Fonts. -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-EXAMPLEHASH" crossorigin="anonymous" />
+     <link rel="stylesheet" href="/path/to/font-awesome/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Ads</a></li>
+                <li><a href="#">Post Ad</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-ad">
+            <h1>Post a Free Ad</h1>
+            <form action="/submit-ad" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="ad-title">Title:</label>
+                    <input type="text" id="ad-title" name="ad-title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="vehicles">Vehicles</option>
+                        <option value="real-estate">Real Estate</option>
+                        <!-- Add more categories as needed -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="images">Upload Images:</label>
+                    <h3>Add at least 1 photo for this category</h3>
+<p>First picture - is the title picture. You can change the order of photos: just grab your photos and drag</p>
+                    <input type="file" id="images" name="images[]" multiple>
+
+
+                    <div class="uploaded-images" id="uploadedImages">
+                        <!-- Uploaded images will be displayed here -->
+                    </div>
+                     <!-- Icon to indicate adding more images -->
+                     <span class="add-more-images-icon">
+                        <i class="fas fa-plus-circle"></i> Add more images
+                    </span>
+                    
+                </div>
+
+
+            
+               
+
+                
+                
+                <div class="form-group">
+                    <label for="contact-name">Your Name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-email">Your Email:</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-phone">Your Phone:</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" required>
+                </div>
+                
+                <button type="submit">Post Ad</button>
+            </form>
+        </section>
+    </main>
+
+   <!--<footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>-->
+<style>
+
+
+/* styles.css */
+
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+  /* Optional: Add some basic styling for the uploaded images and delete icons */
+  .uploaded-images {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .uploaded-images .image-item {
+            position: relative;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .uploaded-images .delete-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 3px;
+            border-radius: 50%;
+        }
+        .uploaded-images img {
+            max-width: 100px;
+            max-height: 100px;
+            display: block;
+        }
+
+.post-ad h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+
+    </style>
+    <script src="scripts/sell.js"></script>
+</body>
+</html>
