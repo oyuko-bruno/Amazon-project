@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Safaricom</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+
+        .hero {
+            background-color: #e0f7fa;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .hero img {
+            margin-right: 10px; /* Adjust the space between the image and the heading as needed */
+        }
+
+        .features {
+            padding: 2em 0;
+            background-color: #f5f5f5;
+        }
+
+        .features .container {
+            display: flex;
+            gap: 2em;
+        }
+
+        .features .feature {
+            flex: 1;
+            padding: 1em;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .features .container {
+                flex-direction: column;
+            }
+
+            .hero img {
+                margin-bottom: 10px; /* Adjust the space between the image and the heading on small screens */
+                margin-right: 0;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="GreenForwardArrow.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Welcome to Our Event Page</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Content Sections -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <h2>Bundles</h2>
+                <p>Choose from a variety of bundles that suit your needs.</p>
+            </div>
+            
+            <div class="feature">
+                <h2>Support</h2>
+                <p>Get help and support for all your queries.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
